@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  GBBlurViewDemo
+
+  Created by Gerardo Blanco García on 16/11/13.
+  Copyright (c) 2013 Gerardo Blanco García. All rights reserved.
+*/
+
+"Light Button" = "Light";
+"Extra Light Button" = "Extra Light";
+"Dark Button" = "Dark";
+"Tint Button" = "Tint";
+"Title Light" = "Blur Light Effect";
+"Title Extra Light" = "Blur Extra Light Effect";
+"Title Dark" = "Blur Dark Effect";
+"Title Tint" = "Blur Tint Effect";
+"Subtitle" = "Tap to return to menu.";
