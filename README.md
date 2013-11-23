@@ -35,8 +35,6 @@ You can also add GBBlurView as a static library to your project or workspace.
 
 ## Usage
 
-To use it, you simply need to an instance of GBBlurView.
-
 First, initialize the GBBlurView instance.
 ```objective-c
 // Default initializer.
@@ -47,4 +45,32 @@ First, initialize the GBBlurView instance.
 
 // Designated initializer that initializes the GBBlurView with the frame, the style and the offset.
 - (id)initWithFrame:(CGRect)frame style:(GBBlurViewStyle)style offset:(CGFloat)offset;
+
+GBBlurView *blurView = [[GBBlurView alloc] initWithFrame:self.view.bounds style:GBBlurViewStyleImage];
 ```
+
+Next, setup the GBBlurView instance:
+
+```objective-c
+blurView.title = @"Title";
+blurView.subtitle = @"Subtitle";
+blurView.image = [UIImage imageNamed:@"Image"];
+blurView.blurEffect = GBBlurViewBlurEffectLight;
+blurView.blurEffectMask = GBBlurViewBlurEffectDark;
+blurView.masked = YES;
+```
+
+And finally, apply the blur effect:
+
+```objective-c
+[blurView applyBlurEffectFromView:self.view];
+```
+##License (MIT)
+
+Copyright (c) 2013 Gerardo Blanco
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
